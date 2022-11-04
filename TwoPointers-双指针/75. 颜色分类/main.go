@@ -55,3 +55,18 @@ func sortColors(nums []int) {
 		}
 	}
 }
+
+func sortColors4(nums []int) {
+	// 定义两个指针 一个从头部出发，一个从尾部出发 p0, p2
+	p0, p2 := 0, len(nums)-1
+	for i := 0; i <= p2; i++ {
+		for ; i <= p2 && nums[i] == 2; p2-- {
+			nums[i], nums[p2] = nums[p2], nums[i]
+			p2--
+		}
+		if nums[i] == 0 {
+			nums[i], nums[p0] = nums[p0], nums[i]
+			p0++
+		}
+	}
+}
