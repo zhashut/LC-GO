@@ -26,8 +26,16 @@ func main() {
 	swapPairs2(&l1)
 }
 
-// 迭代
 func swapPairs(head *ListNode) *ListNode {
+	dummy := &ListNode{Next: head}
+	for pt := dummy; pt != nil && pt.Next != nil && pt.Next.Next != nil; {
+		pt, pt.Next, pt.Next.Next, pt.Next.Next.Next = pt.Next, pt.Next.Next, pt.Next.Next.Next, pt.Next
+	}
+	return dummy.Next
+}
+
+// 迭代
+func swapPairs1(head *ListNode) *ListNode {
 	dummyHead := &ListNode{Val: 0, Next: head}
 	temp := dummyHead
 
@@ -43,7 +51,7 @@ func swapPairs(head *ListNode) *ListNode {
 }
 
 // 递归1
-func swapPairs1(head *ListNode) *ListNode {
+func swapPairs2(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
 		return head
 	}
@@ -54,7 +62,7 @@ func swapPairs1(head *ListNode) *ListNode {
 }
 
 // 递归2
-func swapPairs2(head *ListNode) *ListNode {
+func swapPairs3(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
 		return head
 	}
