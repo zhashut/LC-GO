@@ -9,10 +9,11 @@ package main
  */
 
 func main() {
-	matrix := [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+	matrix := [][]int{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}}
 	spiralOrder(matrix)
 }
 
+// 官方
 func spiralOrder(matrix [][]int) []int {
 	if len(matrix) == 0 || len(matrix[0]) == 0 {
 		return []int{}
@@ -49,4 +50,42 @@ func spiralOrder(matrix [][]int) []int {
 		bottom--
 	}
 	return order
+}
+
+//TODO
+func spiralOrder1(matrix [][]int) []int {
+	if len(matrix) == 0 || len(matrix[0]) == 0 {
+		return []int{}
+	}
+	rows, cloums := len(matrix), len(matrix[0])
+	left, right := 0, cloums-1
+	top, bottom := 0, rows-1
+	// 数字的总数量
+	res := []int{}
+	tarlength := rows * cloums
+
+	// TODO: 这里退出条件有问题
+	for len(res) < tarlength {
+		// 从左到右
+		for i := left; i <= right; i++ {
+			res = append(res, matrix[left][i])
+		}
+		top++
+		// 从上到下
+		for i := top; i <= bottom; i++ {
+			res = append(res, matrix[i][right])
+		}
+		right--
+		// 从右到左
+		for i := right; i >= left; i-- {
+			res = append(res, matrix[bottom][i])
+		}
+		bottom--
+		// 从下到上
+		for i := bottom; i >= top; i-- {
+			res = append(res, matrix[i][left])
+		}
+		left++
+	}
+	return res
 }
