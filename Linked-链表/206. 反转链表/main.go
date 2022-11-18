@@ -58,9 +58,9 @@ func reverseList1(head *ListNode) *ListNode {
 	return newHead
 }
 
-// TODO: 这里因为初始化是0，不是nil所以反转后会多一个0，因此通不过， java可以初始化为 nil
 func reverseList2(head *ListNode) *ListNode {
-	ans := &ListNode{}
+	// 使用指针初始化时，初始化值为 nil
+	var ans *ListNode
 
 	for x := head; x != nil; x = x.Next {
 		ans = &ListNode{
