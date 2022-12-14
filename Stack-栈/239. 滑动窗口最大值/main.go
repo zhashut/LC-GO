@@ -76,7 +76,7 @@ func maxSlidingWindow1(nums []int, k int) []int {
 	if len(nums) == 0 || len(nums) < k {
 		return make([]int, 0)
 	}
-	window := make([]int, 0, k) // store the index of nums
+	window := make([]int, 0, k) // store the index of nums (window 用来存储下标)
 	result := make([]int, 0, len(nums)-k+1)
 	for i, v := range nums { // if the left-most index is out of window, remove it
 		if i >= k && window[0] <= i-k {
@@ -87,7 +87,7 @@ func maxSlidingWindow1(nums []int, k int) []int {
 		}
 		window = append(window, i) // store the index of nums
 		if i >= k-1 {
-			result = append(result, nums[window[0]]) // the left-most is the index of max value in nums
+			result = append(result, nums[window[0]]) // the left-most is the index of max value in nums - 单调栈，最前的为最大值
 		}
 	}
 	return result
