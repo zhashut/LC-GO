@@ -25,8 +25,7 @@ func merge(intervals [][]int) [][]int {
 			right = max(right, intervals[i][1])
 		}
 	}
-	// 将最后一个区间放入
-	result = append(result, []int{left, right})
+	result = append(result, []int{left, right}) // 将最后一个区间放入
 
 	return result
 }
