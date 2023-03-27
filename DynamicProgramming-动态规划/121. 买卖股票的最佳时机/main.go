@@ -41,23 +41,6 @@ func maxProfit2(prices []int) int {
 	return dp[(len(prices)-1)%2][1]
 }
 
-func maxProfit3(prices []int) int {
-	if len(prices) < 1 {
-		return 0
-	}
-	min, maxProfit := prices[0], 0
-	for i := 1; i < len(prices); i++ {
-		if prices[i]-min > maxProfit {
-			maxProfit = prices[i] - min
-		}
-		if prices[i] < min {
-			min = prices[i]
-		}
-	}
-
-	return maxProfit
-}
-
 func max(a, b int) int {
 	if a > b {
 		return a
