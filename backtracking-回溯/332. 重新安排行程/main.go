@@ -9,7 +9,7 @@ import (
  * @author: 炸薯条
  * Date: 2023/2/23
  * Time: 22:53
- * Description: No Description
+ * Description: https://leetcode.cn/problems/reconstruct-itinerary/
  */
 
 type pair struct {
@@ -74,4 +74,38 @@ func findItinerary(tickets [][]string) []string {
 	backtracking()
 
 	return result
+}
+
+func findItinerary2(tickets [][]string) []string {
+	var (
+		m   = map[string][]string{}
+		res []string
+	)
+
+	for _, ticket := range tickets {
+		src, dst := ticket[0], ticket[1]
+		m[src] = append(m[src], dst)
+	}
+	for key := range m {
+		sort.Strings(m[key])
+	}
+
+	var dfs func(curr string)
+	dfs = func(curr string) {
+		for {
+			if v, ok := m[curr]; !ok || len(v) == 0 {
+				break
+			}
+			tmp := m[curr][0]
+			m[curr] = m[curr][1:]
+			dfs(tmp)
+		}
+		res = append(res, curr)
+	}
+
+	dfs("JFK")
+	for i := 0; i < len(res)/2; i++ {
+		res[i], res[len(res)-1-i] = res[len(res)-1-i], res[i]
+	}
+	return res
 }
