@@ -5,7 +5,7 @@ package main
  * @author: 炸薯条
  * Date: 2022/11/6
  * Time: 23:53
- * Description: No Description
+ * Description: https://leetcode.cn/problems/remove-element/
  */
 
 func main() {
