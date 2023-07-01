@@ -5,7 +5,7 @@ package main
  * @author: 炸薯条
  * Date: 2022/11/14
  * Time: 10:34
- * Description: No Description
+ * Description: https://leetcode.cn/problems/remove-linked-list-elements/
  */
 
 type ListNode struct {
