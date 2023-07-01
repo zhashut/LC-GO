@@ -10,7 +10,7 @@ import (
  * @author: 炸薯条
  * Date: 2022/11/10
  * Time: 21:53
- * Description: No Description
+ * Description: https://leetcode.cn/problems/minimum-size-subarray-sum/
  */
 
 func main() {
