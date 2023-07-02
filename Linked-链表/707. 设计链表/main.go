@@ -7,7 +7,7 @@ import "fmt"
  * @author: 炸薯条
  * Date: 2023/4/13
  * Time: 9:48
- * Description: No Description
+ * Description: https://leetcode.cn/problems/design-linked-list/
  */
 
 type ListNode struct {
