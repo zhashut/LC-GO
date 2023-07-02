@@ -5,7 +5,7 @@ package main
  * @author: 炸薯条
  * Date: 2022/11/15
  * Time: 20:00
- * Description: No Description
+ * Description: https://leetcode.cn/problems/reverse-linked-list/
  */
 
 type ListNode struct {
@@ -30,21 +30,17 @@ func main() {
 
 // 迭代
 func reverseList(head *ListNode) *ListNode {
-	if head == nil {
-		return &ListNode{}
-	}
-
-	var prev *ListNode
+	var pre *ListNode
 	cur := head
 
 	for cur != nil {
 		next := cur.Next
-		cur.Next = prev
-		prev = cur
+		cur.Next = pre
+		pre = cur
 		cur = next
 	}
 
-	return prev
+	return pre
 }
 
 // 递归
