@@ -5,7 +5,7 @@ package main
  * @author: 炸薯条
  * Date: 2022/11/16
  * Time: 18:03
- * Description: No Description
+ * Description: https://leetcode.cn/problems/remove-nth-node-from-end-of-list/
  */
 
 type ListNode struct {
@@ -48,20 +48,6 @@ func getLength(head *ListNode) (length int) {
 		length++
 	}
 	return
-}
-
-// -----------------------------------------------------------------------
-
-// 双指针 -----------------------------------------------------------------------
-func removeNthFromEnd2(head *ListNode, n int) *ListNode {
-	nodes := []*ListNode{}
-	dummy := &ListNode{0, head}
-	for node := dummy; node != nil; node = node.Next {
-		nodes = append(nodes, node)
-	}
-	prev := nodes[len(nodes)-1-n]
-	prev.Next = prev.Next.Next
-	return dummy.Next
 }
 
 // -----------------------------------------------------------------------
