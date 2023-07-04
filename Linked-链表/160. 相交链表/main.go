@@ -5,7 +5,7 @@ package main
  * @author: 炸薯条
  * Date: 2022/11/16
  * Time: 21:08
- * Description: No Description
+ * Description: https://leetcode.cn/problems/intersection-of-two-linked-lists/
  */
 
 type ListNode struct {
@@ -17,21 +17,39 @@ func main() {
 
 }
 
-// 方法一：哈希集合
+// 方法一：快慢指针
 func getIntersectionNode(headA, headB *ListNode) *ListNode {
-	vis := map[*ListNode]bool{}
-
-	for temp := headA; temp != nil; temp = temp.Next {
-		vis[temp] = true
+	curA := headA
+	curB := headB
+	lenA, lenB := 0, 0
+	// 求A，B的长度
+	for curA != nil {
+		curA = curA.Next
+		lenA++
 	}
-
-	for temp := headB; temp != nil; temp = temp.Next {
-		if vis[temp] {
-			return temp
-		}
+	for curB != nil {
+		curB = curB.Next
+		lenB++
 	}
-
-	return nil
+	var step int
+	var fast, slow *ListNode
+	// 请求长度差，并且让更长的链表先走相差的长度
+	if lenA > lenB {
+		step = lenA - lenB
+		fast, slow = headA, headB
+	} else {
+		step = lenB - lenA
+		fast, slow = headB, headA
+	}
+	for i := 0; i < step; i++ {
+		fast = fast.Next
+	}
+	// 遍历两个链表遇到相同则跳出遍历
+	for fast != slow {
+		fast = fast.Next
+		slow = slow.Next
+	}
+	return fast
 }
 
 // 方法二：双指针
@@ -57,4 +75,21 @@ func getIntersectionNode1(headA, headB *ListNode) *ListNode {
 	}
 
 	return pa
+}
+
+// 方法三：哈希集合
+func getIntersectionNode3(headA, headB *ListNode) *ListNode {
+	vis := map[*ListNode]bool{}
+
+	for temp := headA; temp != nil; temp = temp.Next {
+		vis[temp] = true
+	}
+
+	for temp := headB; temp != nil; temp = temp.Next {
+		if vis[temp] {
+			return temp
+		}
+	}
+
+	return nil
 }
