@@ -7,7 +7,7 @@ import "sort"
  * @author: 炸薯条
  * Date: 2022/11/19
  * Time: 3:25
- * Description: No Description
+ * Description: https://leetcode.cn/problems/intersection-of-two-arrays/
  */
 
 func main() {
