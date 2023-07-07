@@ -5,7 +5,7 @@ package main
  * @author: 炸薯条
  * Date: 2022/11/20
  * Time: 0:22
- * Description: No Description
+ * Description: https://leetcode.cn/problems/happy-number/
  */
 
 func main() {
