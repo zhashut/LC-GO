@@ -5,7 +5,7 @@ package main
  * @author: 炸薯条
  * Date: 2022/11/29
  * Time: 22:58
- * Description: No Description
+ * Description: https://leetcode.cn/problems/implement-queue-using-stacks/
  */
 
 func main() {
