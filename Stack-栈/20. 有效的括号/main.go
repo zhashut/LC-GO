@@ -5,7 +5,7 @@ package main
  * @author: 炸薯条
  * Date: 2022/11/28
  * Time: 22:37
- * Description: No Description
+ * Description: https://leetcode.cn/problems/valid-parentheses/
  */
 
 func main() {
