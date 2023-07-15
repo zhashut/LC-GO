@@ -5,7 +5,7 @@ package main
  * @author: 炸薯条
  * Date: 2022/12/2
  * Time: 19:20
- * Description: No Description
+ * Description: https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string/
  */
 
 func main() {
