@@ -5,7 +5,7 @@ package main
  * @author: 炸薯条
  * Date: 2022/12/3
  * Time: 23:20
- * Description: No Description
+ * Description: https://leetcode.cn/problems/sliding-window-maximum/
  */
 
 func main() {
