@@ -10,7 +10,7 @@ import (
  * @author: 炸薯条
  * Date: 2022/12/5
  * Time: 0:20
- * Description: No Description
+ * Description: https://leetcode.cn/problems/top-k-frequent-elements/
  */
 
 func main() {
@@ -68,7 +68,7 @@ func (pq *PriorityQueue) Pop() interface{} {
 	return item
 }
 
-//方法二:利用O(logn)排序
+// 方法二:利用O(logn)排序
 func topKFrequent1(nums []int, k int) []int {
 	ans := []int{}
 	map_num := map[int]int{}
