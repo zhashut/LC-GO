@@ -7,7 +7,7 @@ import "container/list"
  * @author: 炸薯条
  * Date: 2022/12/17
  * Time: 13:10
- * Description: No Description
+ * Description: https://leetcode.cn/problems/maximum-depth-of-binary-tree/
  */
 
 type Node struct {

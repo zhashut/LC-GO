@@ -10,7 +10,7 @@ import (
  * @author: 炸薯条
  * Date: 2022/12/17
  * Time: 12:17
- * Description: No Description
+ * Description: https://leetcode.cn/problems/maximum-depth-of-binary-tree/
  */
 
 type TreeNode = global.TreeNode
