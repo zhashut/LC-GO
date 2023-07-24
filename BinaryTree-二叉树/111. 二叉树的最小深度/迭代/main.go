@@ -7,7 +7,7 @@ import "LC/BinaryTree-二叉树/global"
  * @author: 炸薯条
  * Date: 2022/12/19
  * Time: 1:24
- * Description: No Description
+ * Description: https://leetcode.cn/problems/minimum-depth-of-binary-tree/
  */
 
 type TreeNode = global.TreeNode

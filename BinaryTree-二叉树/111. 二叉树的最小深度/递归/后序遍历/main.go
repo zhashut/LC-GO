@@ -7,7 +7,7 @@ import "LC/BinaryTree-二叉树/global"
  * @author: 炸薯条
  * Date: 2022/12/19
  * Time: 0:09
- * Description: No Description
+ * Description: https://leetcode.cn/problems/minimum-depth-of-binary-tree/
  */
 
 type TreeNode = global.TreeNode
@@ -16,7 +16,7 @@ func main() {
 
 }
 
-//  后序递归
+// 后序递归
 func minDepth(root *TreeNode) int {
 	return getDepth(root)
 
