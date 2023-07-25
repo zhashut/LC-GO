@@ -10,7 +10,7 @@ import (
  * @author: 炸薯条
  * Date: 2022/12/23
  * Time: 21:06
- * Description: No Description
+ * Description: https://leetcode.cn/problems/binary-tree-paths/
  */
 
 type TreeNode = global.TreeNode
