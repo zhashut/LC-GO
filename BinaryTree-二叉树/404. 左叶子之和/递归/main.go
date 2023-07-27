@@ -7,7 +7,7 @@ import "LC/BinaryTree-二叉树/global"
  * @author: 炸薯条
  * Date: 2022/12/24
  * Time: 22:13
- * Description: No Description
+ * Description: https://leetcode.cn/problems/sum-of-left-leaves/
  */
 
 type TreeNode = global.TreeNode
