@@ -1,4 +1,6 @@
-package _04__二分查找
+package main
+
+import "fmt"
 
 /**
  * Created with GoLand 2022.2.3.
@@ -7,6 +9,13 @@ package _04__二分查找
  * Time: 7:43
  * Description: https://leetcode.cn/problems/binary-search/
  */
+
+func main() {
+	nums := []int{-1, 0, 3, 5, 9, 12}
+	target := 2
+	index := search(nums, target)
+	fmt.Println(index)
+}
 
 // 左闭右开
 func search(nums []int, target int) int {
